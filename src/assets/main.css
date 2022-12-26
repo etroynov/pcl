@@ -1,1 +1,14 @@
+@import './normalize.css';
+@import './fonts.css';
 @import './vars.css';
+
+html,
+body {
+  font: normal 15px 'Inter', sans-serif;
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}

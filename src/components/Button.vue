@@ -4,10 +4,8 @@
   <button class="btn-primary">test</button>
 </template>
 
-<script setup></script>
+<script setup lang="ts"></script>
 
 <style scoped>
-.btn {
-
-}
+.btn {}
 </style>

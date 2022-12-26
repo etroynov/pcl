@@ -1,3 +1,12 @@
 :root {
-  --some-color: #ffffff;
+  --main-color: #FFFFFF;
+  --secondary-color: #EAEAEA;
+  --bg-color: #FAFAFA;
+  --border-color: #EAEAEA;
+
+  /** Neutral */
+  --neutral-70-color: #828A9B;
+
+  /** Primary */
+  --primary-100-color: #001333;
 }
