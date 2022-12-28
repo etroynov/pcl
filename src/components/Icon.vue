@@ -31,4 +31,8 @@ const props = defineProps(['name']);
 .icon-power {
   background-image: url('/img/icon_power.svg');
 }
+
+.icon-cross {
+  background-image: url('/img/icon_cross.svg');
+}
 </style>

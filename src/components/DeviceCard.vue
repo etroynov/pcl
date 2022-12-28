@@ -37,3 +37,9 @@
 <script setup lang="ts">
 import Icon from '@/components/Icon.vue';
 </script>
+
+<style scoped>
+.device {
+  border: 1px solid;
+}
+</style>
