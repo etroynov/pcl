@@ -14,6 +14,7 @@ const props = defineProps(['name']);
 
   background-position: center;
   background-repeat: no-repeat;
+  
 }
 
 .icon-cogs {
