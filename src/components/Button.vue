@@ -1,10 +1,15 @@
 <template>
-  <button class="btn btn-primary">Test</button>
-  <button class="btn btn-secondary">Test</button>
-
+  <button class="btn" :class="props.type"><slot></slot></button>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+type TypesList = 'default' | 'primary' | 'ghost';
+type Props = {
+  type: TypesList;
+};
+
+const props = defineProps<Props>();
+</script>
 
 <style scoped>
 .btn {
@@ -18,18 +23,17 @@
 
 .btn:hover {
   color: #ffffff;
-  background-color: #001C4D;
-  border-color: #001C4D;
+  background-color: #001c4d;
+  border-color: #001c4d;
 }
 
-.btn-primary {
+.primary {
   color: #ffffff;
   background-color: #001333;
 }
 
-.btn-secondary {
+.secondary {
   color: #001333;
   background-color: transparent;
 }
-
 </style>

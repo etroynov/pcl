@@ -1,17 +1,16 @@
 <template>
   <header class="header">
-    <div>
-      <Badge status="paid" />
+    <div class="row">
+      <div class="company-info col">
+        <div class="company-info__logo"></div>
+        <div class="company-info__name">Pixout ltd.</div>
+      </div>
+      <div class="col"><Badge status="paid" /></div>
     </div>
     <nav>
       <ul class="menu">
-        <li class="menu-item" v-for="link in links" :key="link.href">
-          <a
-            class="menu-link"
-            :class="{ 'menu-link-active': link.active }"
-            :href="link.href"
-            >{{ link.label }}</a
-          >
+        <li class="menu__item" v-for="route in routes" :key="route.name">
+          <a class="menu__link" :href="route.path">{{ route.name }}</a>
         </li>
       </ul>
     </nav>
@@ -20,38 +19,7 @@
 
 <script setup lang="ts">
 import Badge from '../Badge.vue';
-
-const links = [
-  {
-    label: 'Overview',
-    href: 'overview',
-  },
-  {
-    label: 'Subscription',
-    href: 'subscription',
-  },
-  {
-    label: 'License',
-    href: 'license',
-  },
-  {
-    label: 'Clients',
-    href: 'clients',
-  },
-  {
-    label: 'Groups',
-    href: 'groups',
-  },
-  {
-    label: 'Devices',
-    href: 'devices',
-    active: true,
-  },
-  {
-    label: 'Settings',
-    href: 'settings',
-  },
-];
+import { routes } from '@/router';
 </script>
 
 <style scoped>
@@ -69,7 +37,7 @@ const links = [
   list-style: none;
 }
 
-.menu-link {
+.menu__link {
   padding-bottom: 18px;
   display: inline-block;
   color: var(--neutral-70-color);

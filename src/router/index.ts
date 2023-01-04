@@ -4,16 +4,50 @@ import {
   type RouteRecordRaw,
 } from 'vue-router';
 
-import DefaultLayout from '@/pages/Home.vue';
+import DefaultLayout from '@/layouts/Default.vue';
 
-const routes: RouteRecordRaw[] = [
+export const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: () => import('@/pages/Home.vue'),
-    meta: {
-      layout: DefaultLayout,
-    },
+    meta: { layout: DefaultLayout },
+  },
+  {
+    path: '/subscriptions',
+    name: 'Subscription',
+    component: () => import('@/pages/Subscriptions.vue'),
+    meta: { layout: DefaultLayout },
+  },
+  {
+    path: '/licenses',
+    name: 'License',
+    component: () => import('@/pages/Licenses.vue'),
+    meta: { layout: DefaultLayout },
+  },
+  {
+    path: '/clients',
+    name: 'Clients',
+    component: () => import('@/pages/Clients.vue'),
+    meta: { layout: DefaultLayout },
+  },
+  {
+    path: '/groups',
+    name: 'Groups',
+    component: () => import('@/pages/Groups.vue'),
+    meta: { layout: DefaultLayout },
+  },
+  {
+    path: '/devices',
+    name: 'Devices',
+    component: () => import('@/pages/Devices.vue'),
+    meta: { layout: DefaultLayout },
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    component: () => import('@/pages/Settings.vue'),
+    meta: { layout: DefaultLayout },
   },
 ];
 

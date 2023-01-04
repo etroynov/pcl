@@ -3,7 +3,12 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps(['name']);
+type IconsList = 'cogs';
+type Props = {
+  name: IconsList;
+};
+
+const props = defineProps<Props>();
 </script>
 
 <style scoped>
@@ -14,7 +19,6 @@ const props = defineProps(['name']);
 
   background-position: center;
   background-repeat: no-repeat;
-  
 }
 
 .icon-cogs {

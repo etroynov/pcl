@@ -5,14 +5,15 @@
         <div class="header__col">
           <img src="/img/device_placeholder.svg" alt="" />
         </div>
+
         <div class="header__col">
           <h3 class="device__name">Stage 1</h3>
           <h4 class="device__uvs">Universes: 50</h4>
         </div>
       </div>
       <div class="header__controls">
-        <button><Icon name="cogs" /></button>
-        <button><Icon name="trash" /></button>
+        <button class="btn"><Icon name="cogs" /></button>
+        <button class="btn"><Icon name="trash" /></button>
       </div>
     </header>
 
@@ -22,11 +23,11 @@
     </div>
 
     <footer class="device__footer footer">
-      <div class="footer_controls">
-        <button>
+      <div class="footer__controls">
+        <div class="indicator">
           <Icon name="wifi" />
-        </button>
-        <button>
+        </div>
+        <button class="btn">
           <Icon name="power" />
         </button>
       </div>
@@ -40,20 +41,26 @@ import Icon from '@/components/Icon.vue';
 
 <style scoped>
 .device {
-  width: 377px;
-  border: 1px solid #C0C4CD;
+  width: 328px;
+  border: 1px solid #c0c4cd;
   box-shadow: 0px 0px 8px 2px rgba(0, 14, 51, 0.2);
   border-radius: 8px;
   padding: 24px;
 }
-button {
+.btn {
+  padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .header__row {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+.header__controls {
+  display: flex;
+  gap: 12px;
 }
 .device__header {
   display: flex;
@@ -89,5 +96,11 @@ button {
 .device__footer {
   display: flex;
   justify-content: flex-end;
+}
+
+.footer__controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 </style>

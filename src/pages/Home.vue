@@ -1,20 +1,27 @@
 <template>
-  <div>
-    <Header />
-
-    <main>
-      <div class="container">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque
-          fugit, quae sit eveniet illum sapiente esse amet similique ipsa totam
-          nobis id neque quibusdam placeat, labore atque quis dignissimos
-          veritatis.
-        </p>
+  <div class="container">
+    <div>
+      <SearchBar />
+    </div>
+    <main class="content">
+      <div class="devices">
+        <DeviceCard v-for="device in devices" :key="device" />
       </div>
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
-import Header from '@/components/common/Header.vue';
+import DeviceCard from '@/components/DeviceCard.vue';
+import SearchBar from '@/components/SearchBar.vue';
+
+const devices = Array(1, 2, 3, 4, 5);
 </script>
+
+<style scoped>
+.devices {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+</style>
