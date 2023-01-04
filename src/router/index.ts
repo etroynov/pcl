@@ -5,6 +5,7 @@ import {
 } from 'vue-router';
 
 import DefaultLayout from '@/layouts/Default.vue';
+import AuthLayout from '@/layouts/Auth.vue';
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -48,6 +49,19 @@ export const routes: RouteRecordRaw[] = [
     name: 'Settings',
     component: () => import('@/pages/Settings.vue'),
     meta: { layout: DefaultLayout },
+  },
+
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('@/pages/Register.vue'),
+    meta: { layout: AuthLayout },
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/pages/Login.vue'),
+    meta: { layout: AuthLayout },
   },
 ];
 

@@ -10,7 +10,9 @@
     <nav>
       <ul class="menu">
         <li class="menu__item" v-for="route in routes" :key="route.name">
-          <a class="menu__link" :href="route.path">{{ route.name }}</a>
+          <RouterLink class="menu__link" :to="route.path">
+            {{ route.name }}
+          </RouterLink>
         </li>
       </ul>
     </nav>
