@@ -1,6 +1,4 @@
 <template>
-  <RouterLink class="menu__link" to="/login"> Login </RouterLink>
-  <RouterLink class="menu__link" to="/register"> Register </RouterLink>
   <RouterView />
 </template>
 
