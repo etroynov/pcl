@@ -1,12 +1,16 @@
 :root {
-  --main-color: #FFFFFF;
-  --secondary-color: #EAEAEA;
-  --bg-color: #FAFAFA;
-  --border-color: #EAEAEA;
+  --main-color: #ffffff;
+  --secondary-color: #eaeaea;
+  --bg-color: #fafafa;
+  --border-color: #eaeaea;
 
   /** Neutral */
-  --neutral-70-color: #828A9B;
+  --neutral-70-color: #828a9b;
 
   /** Primary */
   --primary-100-color: #001333;
+
+  /** Grey */
+  --grey-40-color: #bdbdbd;
+  --grey-30-color: #828282;
 }
