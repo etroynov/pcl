@@ -50,6 +50,18 @@ export const routes: RouteRecordRaw[] = [
     component: () => import('@/pages/Settings.vue'),
     meta: { layout: DefaultLayout },
   },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: () => import('@/pages/Profile.vue'),
+    meta: { layout: DefaultLayout },
+  },
+  {
+    path: '/changelog',
+    name: 'Changelog',
+    component: () => import('@/pages/Changelog.vue'),
+    meta: { layout: DefaultLayout },
+  },
 
   {
     path: '/register',

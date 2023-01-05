@@ -2,9 +2,13 @@
 @import './fonts.css';
 @import './vars.css';
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
-  font: normal 15px 'Inter', sans-serif;
+  font: normal 16px 'Inter', sans-serif;
   background-color: var(--bg-color);
 }
 

@@ -41,7 +41,7 @@ import Icon from '@/components/Icon.vue';
 
 <style scoped>
 .device {
-  width: 328px;
+  width: 378px;
   border: 1px solid #c0c4cd;
   box-shadow: 0px 0px 8px 2px rgba(0, 14, 51, 0.2);
   border-radius: 8px;

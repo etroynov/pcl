@@ -3,7 +3,15 @@
 </template>
 
 <script setup lang="ts">
-type IconsList = 'cogs';
+type IconsList =
+  | 'cogs'
+  | 'trash'
+  | 'wifi'
+  | 'power'
+  | 'cross'
+  | 'menu-block'
+  | 'menu-list';
+
 type Props = {
   name: IconsList;
 };
@@ -39,5 +47,13 @@ const props = defineProps<Props>();
 
 .icon-cross {
   background-image: url('/img/icon_cross.svg');
+}
+
+.icon-menu-block {
+  background-image: url('/img/icon_menu_block.svg');
+}
+
+.icon-menu-list {
+  background-image: url('/img/icon_menu_list.svg');
 }
 </style>

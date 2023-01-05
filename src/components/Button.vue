@@ -1,16 +1,28 @@
 <template>
-  <button class="btn" :class="classList"><slot></slot></button>
+  <button class="btn" :class="classList" @click="props.onClick">
+    <slot></slot>
+  </button>
 </template>
 
 <script setup lang="ts">
 type TypesList = 'default' | 'primary' | 'ghost';
 type Props = {
   type?: TypesList;
-  size?: 's' | 'm';
+  size?: 'm' | 's' | 'xs';
+  block?: boolean;
+  class?: string;
+
+  onClick?: (e: any) => void;
 };
 
 const props = defineProps<Props>();
-const classList = [props.type || 'default', props.size || 'm'];
+console.info(props.type || 'default');
+const classList = [
+  props.type || 'default',
+  props.size || 'm',
+  props.block ? 'block' : '',
+  props.class,
+];
 </script>
 
 <style scoped>
@@ -31,7 +43,7 @@ const classList = [props.type || 'default', props.size || 'm'];
 
 .default {
   color: var(--grey-30-color);
-  border: 1px solid var(--grey-40-color);
+  border: 1px solid var(--neutral-60-color);
 }
 
 .primary {
@@ -44,11 +56,19 @@ const classList = [props.type || 'default', props.size || 'm'];
   background-color: transparent;
 }
 
-.s {
-  padding: 8px 24px;
+.block {
+  width: 100%;
 }
 
 .m {
   padding: 12px 32px;
+}
+
+.s {
+  padding: 7px 24px;
+}
+
+.xs {
+  padding: 9px;
 }
 </style>
