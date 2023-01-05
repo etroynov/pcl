@@ -6,15 +6,17 @@
       </header>
       <form class="form">
         <div class="form__group">
-          <input type="text" class="form__field" placeholder="Email adress"/>
+          <input type="text" class="form__field" placeholder="Email adress" />
         </div>
         <div class="form__group">
-          <input type="submit" class="form__btn"  value="Continue with Email" />
+          <input type="submit" class="form__btn" value="Continue with Email" />
         </div>
       </form>
     </div>
     <footer class="footer">
-      <RouterLink to="/register">Don’t have an acount? Sign Up</RouterLink>
+      <RouterLink to="/register" class="footer__link">
+        Don’t have an acount? Sign Up
+      </RouterLink>
     </footer>
   </div>
 </template>
@@ -29,11 +31,17 @@
 .footer {
   display: flex;
   justify-content: center;
-  border-top: 1px solid #D0D3DA;;
+  border-top: 1px solid #d0d3da;
   padding: 32px;
   font-size: 20px;
   line-height: 28px;
-  color: #005EFF;
+  color: var(--primary-50-color);
+}
+
+.footer__link {
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--primary-50-color);
 }
 
 .container {
@@ -59,20 +67,22 @@
 
 .form__field {
   width: 400px;
-  background: #FFFFFF;
-  border: 1px solid #99A0AF;
+  padding: 12px 15px;
+  font-size: 16px;
+  background: #ffffff;
+  border: 1px solid #99a0af;
   border-radius: 4px;
-  padding: 10px;
 }
 
 .form__btn {
   gap: 88px;
   width: 422px;
-  padding: 10px;
-  background: #005EFF;
-  color: #FFFFFF;
+  padding: 12px 26px;
+  background: var(--primary-50-color) url('/img/icon_letter.svg') 24px center
+    no-repeat;
+  color: #ffffff;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
-
 </style>
