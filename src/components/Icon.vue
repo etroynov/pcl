@@ -56,4 +56,5 @@ const props = defineProps<Props>();
 .icon-menu-list {
   background-image: url('/img/icon_menu_list.svg');
 }
+
 </style>

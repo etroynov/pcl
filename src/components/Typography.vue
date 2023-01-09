@@ -20,6 +20,7 @@ const classList = [props.class, tag];
   margin: 0;
 }
 
+
 .h2 {
   font-size: 20px;
   line-height: 28px;

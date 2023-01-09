@@ -66,7 +66,7 @@
 }
 
 .form__field {
-  width: 400px;
+  width: 420px;
   padding: 12px 15px;
   font-size: 16px;
   background: #ffffff;
@@ -75,8 +75,7 @@
 }
 
 .form__btn {
-  gap: 88px;
-  width: 422px;
+  width: 420px;
   padding: 12px 26px;
   background: var(--primary-50-color) url('/img/icon_letter.svg') 24px center
     no-repeat;
