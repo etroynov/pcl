@@ -17,7 +17,7 @@ import Button from '@/components/Button.vue';
         </header>
 
         <div class="info__body">
-          <ul>
+          <ul class="info__body__features">
             <li>feature 1</li>
             <li>feature 1</li>
             <li>feature 1</li>
@@ -31,7 +31,7 @@ import Button from '@/components/Button.vue';
         </header>
 
         <div class="info__body">
-          <ul>
+          <ul class="info__body__features">
             <li>feature 1</li>
             <li>feature 1</li>
             <li>feature 1</li>
@@ -42,13 +42,58 @@ import Button from '@/components/Button.vue';
 
     <footer class="modal__footer">
       <Button>Cancel</Button>
-      <Button type="primary">delete account</Button>
+      <Button type="primary">Delete Account</Button>
     </footer>
   </div>
 </template>
 
 <style scoped>
 .modal {
+  width: 452px;
+  display: grid;
+  gap: 32px;
   background: var(--main-color);
+  padding: 40px;
+  box-shadow: 0px 0px 8px 2px rgba(0, 14, 51, 0.2);
+}
+
+.modal__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  color: #3A3F4B;
+}
+
+.info__body {
+  font-weight: 400;
+  font-size: 16px;
+  color: #555252;
+}
+
+.info__body__features {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.modal__title {
+  margin: 0;
+
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: space-between;
 }
 </style>
