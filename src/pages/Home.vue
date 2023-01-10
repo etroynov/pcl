@@ -1,38 +1,26 @@
 <template>
   <div class="container">
-    <div>
-      <SearchBar :onVariantChange="handleVariantChange" />
-    </div>
-    <main class="content">
-      <div v-if="variant === 'block'" class="devices">
-        <DeviceCardBlock v-for="device in devices" :key="device" />
-      </div>
+    <header class="page-header">
+      <Typography>Dashboard</Typography>
+    </header>
 
-      <div v-if="variant === 'list'" class="devices">
-        <DeviceCardList v-for="device in devices" :key="device" />
-      </div>
-    </main>
+    <div>
+      <ResetPasswordModal />
+      <hr />
+      <AddNewCardModal />
+      <hr />
+      <ChangePasswordModal />
+      <hr />
+      <DeleteAccountModal />
+      <hr />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import DeviceCardBlock from '@/components/DeviceCardBlock.vue';
-import DeviceCardList from '@/components/DeviceCardList.vue';
-import SearchBar from '@/components/SearchBar.vue';
-
-const variant = ref('list');
-const devices = Array(1, 2, 3, 4, 5);
-
-function handleVariantChange(value: string) {
-  variant.value = value;
-}
+import Typography from '@/components/Typography.vue';
+import ChangePasswordModal from '@/components/modals/ChangePassword.vue';
+import ResetPasswordModal from '@/components/modals/ResetPassword.vue';
+import AddNewCardModal from '@/components/modals/AddNewCard.vue';
+import DeleteAccountModal from '@/components/modals/DeleteAccount.vue';
 </script>
-
-<style scoped>
-.devices {
-  display: flex;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-</style>

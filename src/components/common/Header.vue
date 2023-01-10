@@ -25,7 +25,7 @@
 
     <nav>
       <ul class="menu">
-        <li class="menu__item" v-for="route in routes" :key="route.name">
+        <li class="menu__item" v-for="route in _routes" :key="route.name">
           <RouterLink class="menu__link" :to="route.path">
             {{ route.name }}
           </RouterLink>
@@ -41,6 +41,12 @@ import Button from '@/components/Button.vue';
 import Avatar from '@/components/Avatar.vue';
 
 import { routes } from '@/router';
+
+const exclude = ['Register', 'Login', 'Changelog'];
+
+const _routes = routes.filter(
+  (route) => route.name && !exclude.includes(route.name)
+);
 </script>
 
 <style scoped>

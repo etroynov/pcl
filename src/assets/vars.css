@@ -5,8 +5,10 @@
   --border-color: #eaeaea;
 
   /** Neutral */
-  --neutral-70-color: #828a9b;
+  --neutral-30-color: #d0d3da;
+  --neutral-40-color: #c0c4cd;
   --neutral-60-color: #99a0af;
+  --neutral-70-color: #828a9b;
   --neutral-80-color: #656d7f;
 
   /** Primary */
@@ -16,4 +18,9 @@
   /** Grey */
   --grey-40-color: #bdbdbd;
   --grey-30-color: #828282;
+
+  /** Sizes */
+  --base-radius-s: 4px;
+  --base-radius: 8px;
+  --base-gap: 16px;
 }

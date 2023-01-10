@@ -57,4 +57,7 @@ const props = defineProps<Props>();
   background-image: url('/img/icon_menu_list.svg');
 }
 
+.icon-eye {
+  background-image: url('/img/icon_eye.svg');
+}
 </style>

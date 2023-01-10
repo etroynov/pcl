@@ -1,13 +1,9 @@
-import {
-  createRouter,
-  createWebHistory,
-  type RouteRecordRaw,
-} from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 import DefaultLayout from '@/layouts/Default.vue';
 import AuthLayout from '@/layouts/Auth.vue';
 
-export const routes: RouteRecordRaw[] = [
+export const routes = [
   {
     path: '/',
     name: 'Home',
@@ -48,12 +44,6 @@ export const routes: RouteRecordRaw[] = [
     path: '/settings',
     name: 'Settings',
     component: () => import('@/pages/Settings.vue'),
-    meta: { layout: DefaultLayout },
-  },
-  {
-    path: '/profile',
-    name: 'Profile',
-    component: () => import('@/pages/Profile.vue'),
     meta: { layout: DefaultLayout },
   },
   {
