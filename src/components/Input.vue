@@ -13,7 +13,6 @@ const props = defineProps<Props>();
 
 <style scoped>
 .input {
-  width: 100%;
   padding: 8px 16px;
   font-size: 16px;
   border: 1px solid var(--neutral-30-color);

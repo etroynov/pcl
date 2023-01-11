@@ -15,7 +15,7 @@ import Button from '@/components/Button.vue';
           <label for="" class="form__label">Old password</label>
           <Input placeholder="********" />
           <div class="form__extra">
-            <a href="" class="form__link">Forgot your password?</a>
+            <a href="">Forgot your password?</a>
           </div>
         </div>
 
@@ -59,7 +59,6 @@ import Button from '@/components/Button.vue';
 
 .form__group {
   display: grid;
-  gap: 8px;
 }
 
 .form__group:not(:last-child) {
@@ -75,12 +74,5 @@ import Button from '@/components/Button.vue';
 .modal__footer {
   display: flex;
   justify-content: space-between;
-}
-
-.form__link {
-  font-size: 12px;
-  line-height: 15px;
-  color: var(--primary-50-color);
-  text-decoration: none;
 }
 </style>

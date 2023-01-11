@@ -59,7 +59,7 @@ import Button from '@/components/Button.vue';
 
 .modal__body {
   display: flex;
-  gap: 24px;
+  justify-content: space-between;
 }
 
 .info {
@@ -71,8 +71,8 @@ import Button from '@/components/Button.vue';
 .info__title {
   margin: 0;
   font-weight: 400;
-  font-size: 19px;
-  color: var(--neutral-90-color);
+  font-size: 20px;
+  color: #3A3F4B;
 }
 
 .info__body {

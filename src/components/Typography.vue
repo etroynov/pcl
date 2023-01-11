@@ -25,11 +25,4 @@ const classList = [props.class, tag];
   font-size: 20px;
   line-height: 28px;
 }
-
-.h5 {
-  margin: 0;
-  font-size: 20px;
-  line-height: 28px;
-
-}
 </style>
