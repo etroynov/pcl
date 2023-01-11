@@ -60,4 +60,6 @@ const props = defineProps<Props>();
 .icon-eye {
   background-image: url('/img/icon_eye.svg');
 }
+
+
 </style>
