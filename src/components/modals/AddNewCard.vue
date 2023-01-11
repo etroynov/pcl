@@ -20,8 +20,10 @@ import Button from '@/components/Button.vue';
         </div>
 
         <div class="form__group">
-          <Input placeholder="mm/yy" />
-          <Input placeholder="CVV" />
+          <div class="row">
+            <Input placeholder="mm/yy" />
+            <Input placeholder="CVV" />
+          </div>
         </div>
       </form>
     </div>
@@ -54,12 +56,16 @@ import Button from '@/components/Button.vue';
 
 .form__group {
   display: grid;
-
 }
+
 .form__group:not(:last-child) {
   padding-bottom: 24px;
 }
 
+.row {
+  display: flex;
+  gap: 24px;
+}
 
 .modal__footer {
   display: flex;

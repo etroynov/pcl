@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <header class="page-header">
-      <Typography>Licenses</Typography>
+      <Typography>License</Typography>
     </header>
 
-    <div>
+    <div class="cards__container">
       <LicenseCard />
       <LicenseCard />
       <LicenseCard />
@@ -16,3 +16,12 @@
 import Typography from '@/components/Typography.vue';
 import LicenseCard from '@/components/LicenseCard.vue';
 </script>
+
+<style scoped>
+
+.cards__container {
+  display: flex;
+  gap: 31px;
+}
+
+</style>
