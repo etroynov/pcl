@@ -13,7 +13,7 @@ import Button from '@/components/Button.vue';
       <form class="form">
         <div class="form__group group">
           <label for="" class="group__name">Board cover</label>
-          <input type="file" name="" id="" />
+          <input type="file" name="" id="" class="cover__placeholder" />
         </div>
 
         <div class="form__group group">
@@ -23,7 +23,7 @@ import Button from '@/components/Button.vue';
 
         <div class="form__group group">
           <label for="" class="group__name">Chosen Devices</label>
-          <select class="">
+          <select class="ammount_chooser">
             <option value="">3</option>
           </select>
         </div>
@@ -58,6 +58,14 @@ import Button from '@/components/Button.vue';
   box-shadow: 0px 0px 8px 2px rgba(0, 14, 51, 0.2);
 }
 
+.cover__placeholder {
+  width: 267px;
+  height: 86px;
+  background: #c0c4cd;
+  border: 1px solid #d0d3da;
+  border-radius: 4px;
+}
+
 .modal__body {
   display: grid;
   gap: 24px;
@@ -65,10 +73,12 @@ import Button from '@/components/Button.vue';
 
 .modal__title {
   margin: 0;
+  font-size: 20px;
 }
 
 .form__group {
   display: grid;
+  gap: 8px;
 }
 
 .form__group:not(:last-child) {
@@ -78,5 +88,33 @@ import Button from '@/components/Button.vue';
 .modal__footer {
   display: flex;
   justify-content: space-between;
+}
+
+.group__name {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ammount_chooser {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid var(--neutral-30-color);
+  border-radius: var(--base-radius-s);
+}
+
+.info {
+  display: grid;
+  gap: 8px;
+}
+
+.info__title {
+  font-size: 12px;
+  color: #e65c5c;
+  margin: 0;
+}
+
+.info__body {
+  font-size: 12px;
+  color: #656d7f;
 }
 </style>
