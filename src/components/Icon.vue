@@ -10,7 +10,9 @@ type IconsList =
   | 'power'
   | 'cross'
   | 'menu-block'
-  | 'menu-list';
+  | 'menu-list'
+  | 'facebook'
+  | 'mail';
 
 type Props = {
   name: IconsList;
@@ -59,6 +61,18 @@ const props = defineProps<Props>();
 
 .icon-eye {
   background-image: url('/img/icon_eye.svg');
+}
+
+.icon-mail {
+  background-image: url('/img/icon_mail.svg');
+  width: 32px;
+  height: 32px;
+}
+
+.icon-facebook {
+  background-image: url('/img/icon_facebook.svg');
+  width: 32px;
+  height: 32px;
 }
 
 
